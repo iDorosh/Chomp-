@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD98630E1B4F1F7100D06777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98630D1B4F1F7100D06777 /* AppDelegate.swift */; };
+		DD9863101B4F1F7100D06777 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98630F1B4F1F7100D06777 /* ViewController.swift */; };
+		DD9863131B4F1F7100D06777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9863111B4F1F7100D06777 /* Main.storyboard */; };
+		DD9863161B4F1F7100D06777 /* Chomp_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD9863141B4F1F7100D06777 /* Chomp_.xcdatamodeld */; };
+		DD9863181B4F1F7100D06777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9863171B4F1F7100D06777 /* Assets.xcassets */; };
+		DD98631B1B4F1F7100D06777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9863191B4F1F7100D06777 /* LaunchScreen.storyboard */; };
+		DD9863261B4F1F7100D06777 /* Chomp_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9863251B4F1F7100D06777 /* Chomp_Tests.swift */; };
+		DD9863311B4F1F7100D06777 /* Chomp_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9863301B4F1F7100D06777 /* Chomp_UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD9863221B4F1F7100D06777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD9863021B4F1F7100D06777 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD9863091B4F1F7100D06777;
+			remoteInfo = "Chomp!";
+		};
+		DD98632D1B4F1F7100D06777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD9863021B4F1F7100D06777 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD9863091B4F1F7100D06777;
+			remoteInfo = "Chomp!";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD98630A1B4F1F7100D06777 /* Chomp!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chomp!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD98630D1B4F1F7100D06777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD98630F1B4F1F7100D06777 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD9863121B4F1F7100D06777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD9863151B4F1F7100D06777 /* Chomp_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chomp_.xcdatamodel; sourceTree = "<group>"; };
+		DD9863171B4F1F7100D06777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD98631A1B4F1F7100D06777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD98631C1B4F1F7100D06777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9863211B4F1F7100D06777 /* Chomp!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chomp!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9863251B4F1F7100D06777 /* Chomp_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chomp_Tests.swift; sourceTree = "<group>"; };
+		DD9863271B4F1F7100D06777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD98632C1B4F1F7100D06777 /* Chomp!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chomp!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9863301B4F1F7100D06777 /* Chomp_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chomp_UITests.swift; sourceTree = "<group>"; };
+		DD9863321B4F1F7100D06777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD9863071B4F1F7100D06777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD98631E1B4F1F7100D06777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9863291B4F1F7100D06777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD9863011B4F1F7100D06777 = {
+			isa = PBXGroup;
+			children = (
+				DD98630C1B4F1F7100D06777 /* Chomp! */,
+				DD9863241B4F1F7100D06777 /* Chomp!Tests */,
+				DD98632F1B4F1F7100D06777 /* Chomp!UITests */,
+				DD98630B1B4F1F7100D06777 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD98630B1B4F1F7100D06777 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD98630A1B4F1F7100D06777 /* Chomp!.app */,
+				DD9863211B4F1F7100D06777 /* Chomp!Tests.xctest */,
+				DD98632C1B4F1F7100D06777 /* Chomp!UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD98630C1B4F1F7100D06777 /* Chomp! */ = {
+			isa = PBXGroup;
+			children = (
+				DD98630D1B4F1F7100D06777 /* AppDelegate.swift */,
+				DD98630F1B4F1F7100D06777 /* ViewController.swift */,
+				DD9863111B4F1F7100D06777 /* Main.storyboard */,
+				DD9863171B4F1F7100D06777 /* Assets.xcassets */,
+				DD9863191B4F1F7100D06777 /* LaunchScreen.storyboard */,
+				DD98631C1B4F1F7100D06777 /* Info.plist */,
+				DD9863141B4F1F7100D06777 /* Chomp_.xcdatamodeld */,
+			);
+			path = "Chomp!";
+			sourceTree = "<group>";
+		};
+		DD9863241B4F1F7100D06777 /* Chomp!Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DD9863251B4F1F7100D06777 /* Chomp_Tests.swift */,
+				DD9863271B4F1F7100D06777 /* Info.plist */,
+			);
+			path = "Chomp!Tests";
+			sourceTree = "<group>";
+		};
+		DD98632F1B4F1F7100D06777 /* Chomp!UITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD9863301B4F1F7100D06777 /* Chomp_UITests.swift */,
+				DD9863321B4F1F7100D06777 /* Info.plist */,
+			);
+			path = "Chomp!UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD9863091B4F1F7100D06777 /* Chomp! */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9863351B4F1F7100D06777 /* Build configuration list for PBXNativeTarget "Chomp!" */;
+			buildPhases = (
+				DD9863061B4F1F7100D06777 /* Sources */,
+				DD9863071B4F1F7100D06777 /* Frameworks */,
+				DD9863081B4F1F7100D06777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chomp!";
+			productName = "Chomp!";
+			productReference = DD98630A1B4F1F7100D06777 /* Chomp!.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD9863201B4F1F7100D06777 /* Chomp!Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9863381B4F1F7100D06777 /* Build configuration list for PBXNativeTarget "Chomp!Tests" */;
+			buildPhases = (
+				DD98631D1B4F1F7100D06777 /* Sources */,
+				DD98631E1B4F1F7100D06777 /* Frameworks */,
+				DD98631F1B4F1F7100D06777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD9863231B4F1F7100D06777 /* PBXTargetDependency */,
+			);
+			name = "Chomp!Tests";
+			productName = "Chomp!Tests";
+			productReference = DD9863211B4F1F7100D06777 /* Chomp!Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD98632B1B4F1F7100D06777 /* Chomp!UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD98633B1B4F1F7100D06777 /* Build configuration list for PBXNativeTarget "Chomp!UITests" */;
+			buildPhases = (
+				DD9863281B4F1F7100D06777 /* Sources */,
+				DD9863291B4F1F7100D06777 /* Frameworks */,
+				DD98632A1B4F1F7100D06777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD98632E1B4F1F7100D06777 /* PBXTargetDependency */,
+			);
+			name = "Chomp!UITests";
+			productName = "Chomp!UITests";
+			productReference = DD98632C1B4F1F7100D06777 /* Chomp!UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD9863021B4F1F7100D06777 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Ian Dorosh";
+				TargetAttributes = {
+					DD9863091B4F1F7100D06777 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					DD9863201B4F1F7100D06777 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = DD9863091B4F1F7100D06777;
+					};
+					DD98632B1B4F1F7100D06777 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = DD9863091B4F1F7100D06777;
+					};
+				};
+			};
+			buildConfigurationList = DD9863051B4F1F7100D06777 /* Build configuration list for PBXProject "Chomp!" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD9863011B4F1F7100D06777;
+			productRefGroup = DD98630B1B4F1F7100D06777 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD9863091B4F1F7100D06777 /* Chomp! */,
+				DD9863201B4F1F7100D06777 /* Chomp!Tests */,
+				DD98632B1B4F1F7100D06777 /* Chomp!UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD9863081B4F1F7100D06777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD98631B1B4F1F7100D06777 /* LaunchScreen.storyboard in Resources */,
+				DD9863181B4F1F7100D06777 /* Assets.xcassets in Resources */,
+				DD9863131B4F1F7100D06777 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD98631F1B4F1F7100D06777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD98632A1B4F1F7100D06777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD9863061B4F1F7100D06777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9863101B4F1F7100D06777 /* ViewController.swift in Sources */,
+				DD9863161B4F1F7100D06777 /* Chomp_.xcdatamodeld in Sources */,
+				DD98630E1B4F1F7100D06777 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD98631D1B4F1F7100D06777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9863261B4F1F7100D06777 /* Chomp_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9863281B4F1F7100D06777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9863311B4F1F7100D06777 /* Chomp_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD9863231B4F1F7100D06777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD9863091B4F1F7100D06777 /* Chomp! */;
+			targetProxy = DD9863221B4F1F7100D06777 /* PBXContainerItemProxy */;
+		};
+		DD98632E1B4F1F7100D06777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD9863091B4F1F7100D06777 /* Chomp! */;
+			targetProxy = DD98632D1B4F1F7100D06777 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD9863111B4F1F7100D06777 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD9863121B4F1F7100D06777 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD9863191B4F1F7100D06777 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD98631A1B4F1F7100D06777 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD9863331B4F1F7100D06777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD9863341B4F1F7100D06777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD9863361B4F1F7100D06777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Chomp!/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fullsail.demoApp.Chomp-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD9863371B4F1F7100D06777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Chomp!/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fullsail.demoApp.Chomp-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD9863391B4F1F7100D06777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Chomp!Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fullsail.demoApp.Chomp-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chomp!.app/Chomp!";
+			};
+			name = Debug;
+		};
+		DD98633A1B4F1F7100D06777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Chomp!Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fullsail.demoApp.Chomp-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chomp!.app/Chomp!";
+			};
+			name = Release;
+		};
+		DD98633C1B4F1F7100D06777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Chomp!UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fullsail.demoApp.Chomp-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Chomp!";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DD98633D1B4F1F7100D06777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Chomp!UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fullsail.demoApp.Chomp-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Chomp!";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD9863051B4F1F7100D06777 /* Build configuration list for PBXProject "Chomp!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9863331B4F1F7100D06777 /* Debug */,
+				DD9863341B4F1F7100D06777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD9863351B4F1F7100D06777 /* Build configuration list for PBXNativeTarget "Chomp!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9863361B4F1F7100D06777 /* Debug */,
+				DD9863371B4F1F7100D06777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD9863381B4F1F7100D06777 /* Build configuration list for PBXNativeTarget "Chomp!Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9863391B4F1F7100D06777 /* Debug */,
+				DD98633A1B4F1F7100D06777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD98633B1B4F1F7100D06777 /* Build configuration list for PBXNativeTarget "Chomp!UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD98633C1B4F1F7100D06777 /* Debug */,
+				DD98633D1B4F1F7100D06777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DD9863141B4F1F7100D06777 /* Chomp_.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DD9863151B4F1F7100D06777 /* Chomp_.xcdatamodel */,
+			);
+			currentVersion = DD9863151B4F1F7100D06777 /* Chomp_.xcdatamodel */;
+			path = Chomp_.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DD9863021B4F1F7100D06777 /* Project object */;
+}
