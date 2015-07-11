@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DD9863091B4F1F7100D06777"
+               BlueprintIdentifier = "DD70EFC41B50E79E008F213B"
                BuildableName = "Chomp!.app"
                BlueprintName = "Chomp!"
+               ReferencedContainer = "container:Chomp!.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DD70EFDC1B50E79E008F213B"
+               BuildableName = "Chomp!Tests.xctest"
+               BlueprintName = "Chomp!Tests"
                ReferencedContainer = "container:Chomp!.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,19 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DD9863201B4F1F7100D06777"
+               BlueprintIdentifier = "DD70EFDC1B50E79E008F213B"
                BuildableName = "Chomp!Tests.xctest"
                BlueprintName = "Chomp!Tests"
-               ReferencedContainer = "container:Chomp!.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DD98632B1B4F1F7100D06777"
-               BuildableName = "Chomp!UITests.xctest"
-               BlueprintName = "Chomp!UITests"
                ReferencedContainer = "container:Chomp!.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -52,14 +56,12 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DD9863091B4F1F7100D06777"
+            BlueprintIdentifier = "DD70EFC41B50E79E008F213B"
             BuildableName = "Chomp!.app"
             BlueprintName = "Chomp!"
             ReferencedContainer = "container:Chomp!.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -69,13 +71,12 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DD9863091B4F1F7100D06777"
+            BlueprintIdentifier = "DD70EFC41B50E79E008F213B"
             BuildableName = "Chomp!.app"
             BlueprintName = "Chomp!"
             ReferencedContainer = "container:Chomp!.xcodeproj">
@@ -94,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DD9863091B4F1F7100D06777"
+            BlueprintIdentifier = "DD70EFC41B50E79E008F213B"
             BuildableName = "Chomp!.app"
             BlueprintName = "Chomp!"
             ReferencedContainer = "container:Chomp!.xcodeproj">

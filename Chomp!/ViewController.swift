@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Chomp!
 //
-//  Created by Ian Dorosh on 7/9/15.
-//  Copyright © 2015 Ian Dorosh. All rights reserved.
+//  Created by Ian Dorosh on 7/11/15.
+//  Copyright (c) 2015 Ian Dorosh. All rights reserved.
 //
 
 import UIKit

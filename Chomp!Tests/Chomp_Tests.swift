@@ -2,10 +2,11 @@
 //  Chomp_Tests.swift
 //  Chomp!Tests
 //
-//  Created by Ian Dorosh on 7/9/15.
-//  Copyright © 2015 Ian Dorosh. All rights reserved.
+//  Created by Ian Dorosh on 7/11/15.
+//  Copyright (c) 2015 Ian Dorosh. All rights reserved.
 //
 
+import UIKit
 import XCTest
 
 class Chomp_Tests: XCTestCase {
@@ -22,7 +23,7 @@ class Chomp_Tests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(true, "Pass")
     }
     
     func testPerformanceExample() {
