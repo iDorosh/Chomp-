@@ -48,7 +48,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         recipe2.photo = "chouder.png"
         
         var recipe3: info = info()
-        recipe3.name = "Hawaiian Buger"
+        recipe3.name = "Hawaiian Burger"
         recipe3.category = "Burgers"
         recipe3.directions = "For the burgers: Gently combine the ground beef with grated carrots, scallions, ginger, soy sauce and sriracha sauce. Form into 8 equal sized patties, try not to overwork the meat so it doesn't get tough."
         recipe3.ingredients = "1 tbsp ground cumin\n1 tbsp garlic powder\n1 tbsp onion powder\n1 tbsp chili powder\n1 tbsp cayenne pepper"
