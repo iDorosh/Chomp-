@@ -13,7 +13,7 @@ class info
     var name: String = ""
     var category: String = ""
     var directions: String = ""
-    var ingredients: [String] = []
+    var ingredients: String = ""
     var photo: String = ""
     init()
     {
