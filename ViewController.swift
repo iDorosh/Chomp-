@@ -33,7 +33,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         var recipe1: info = info()
         recipe1.name = "Pulled Pork"
-        recipe1.category = "Sandwichs"
+        recipe1.category = "Sandwiches"
         recipe1.directions = "Place the onions and garlic in an even layer in the slow cooker and pour in the stock or broth. Combine the sugar, chili powder, measured salt, cumin, and cinnamon in a small bowl. Pat the pork dry with paper towels. Rub the spice mixture all over the pork and place the meat on top of the onions and garlic. Cover and cook until the pork is fork tender, about 6 to 8 hours on high or 8 to 10 hours on low."
         recipe1.ingredients = "1 tbsp ground cumin\n1 tbsp garlic powder\n1 tbsp onion powder\n1 tbsp chili powder\n1 tbsp cayenne pepper"
         
