@@ -7,25 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD3647571B62F8BC006309F8 /* NewIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3647561B62F8BC006309F8 /* NewIngredient.swift */; };
+		DD3647591B62FB57006309F8 /* ingredientTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3647581B62FB57006309F8 /* ingredientTableCell.swift */; };
 		DD46F0731B57644200EEAA3C /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46F0721B57644200EEAA3C /* BackTableVC.swift */; };
 		DD46F0751B576C3F00EEAA3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD46F0741B576C3F00EEAA3C /* Main.storyboard */; };
 		DD4818071B55877C00734965 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4818061B55877C00734965 /* SWRevealViewController.m */; };
-		DD4818131B5603A800734965 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4818121B5603A800734965 /* icon.png */; };
 		DD4818151B56143300734965 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4818141B56143300734965 /* ViewController.swift */; };
 		DD4818171B56149B00734965 /* CustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4818161B56149B00734965 /* CustomViewCell.swift */; };
-		DD6E1FE41B583B8200E3D095 /* recipeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6E1FE31B583B8200E3D095 /* recipeItem.swift */; };
 		DD70EFCB1B50E79E008F213B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70EFCA1B50E79E008F213B /* AppDelegate.swift */; };
 		DD70EFCE1B50E79E008F213B /* Chomp_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD70EFCC1B50E79E008F213B /* Chomp_.xcdatamodeld */; };
 		DD70EFD51B50E79E008F213B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD70EFD41B50E79E008F213B /* Images.xcassets */; };
 		DD70EFD81B50E79E008F213B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD70EFD61B50E79E008F213B /* LaunchScreen.xib */; };
 		DD70EFE41B50E79E008F213B /* Chomp_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70EFE31B50E79E008F213B /* Chomp_Tests.swift */; };
+		DD85DBA81B642865007CE772 /* EditViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD85DBA71B642865007CE772 /* EditViewViewController.swift */; };
 		DD8F36DD1B5A05FA004A6FC5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8F36DC1B5A05FA004A6FC5 /* Recipe.swift */; };
 		DD8F36DF1B5A4DC3004A6FC5 /* stockIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8F36DE1B5A4DC3004A6FC5 /* stockIcon.png */; };
 		DD8F36E11B5A517D004A6FC5 /* CreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8F36E01B5A517D004A6FC5 /* CreateVC.swift */; };
-		DDE7F5A71B57074800BEE3DC /* recipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7F5A61B57074800BEE3DC /* recipeInfo.swift */; };
-		DDE7F5AD1B570F2700BEE3DC /* pork.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE7F5AA1B570F2700BEE3DC /* pork.png */; };
-		DDE7F5AE1B570F2700BEE3DC /* chouder.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE7F5AB1B570F2700BEE3DC /* chouder.png */; };
-		DDE7F5AF1B570F2700BEE3DC /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = DDE7F5AC1B570F2700BEE3DC /* burger.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,15 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD3647561B62F8BC006309F8 /* NewIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewIngredient.swift; sourceTree = "<group>"; };
+		DD3647581B62FB57006309F8 /* ingredientTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ingredientTableCell.swift; sourceTree = "<group>"; };
 		DD46F0721B57644200EEAA3C /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackTableVC.swift; path = ../BackTableVC.swift; sourceTree = "<group>"; };
 		DD46F0741B576C3F00EEAA3C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DD4818041B55877C00734965 /* Chomp!-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chomp!-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD4818051B55877C00734965 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		DD4818061B55877C00734965 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		DD4818121B5603A800734965 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DD4818141B56143300734965 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		DD4818161B56149B00734965 /* CustomViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewCell.swift; sourceTree = "<group>"; };
-		DD6E1FE31B583B8200E3D095 /* recipeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeItem.swift; sourceTree = "<group>"; };
 		DD70EFC51B50E79E008F213B /* Chomp!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chomp!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD70EFC91B50E79E008F213B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD70EFCA1B50E79E008F213B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,13 +54,10 @@
 		DD70EFDD1B50E79E008F213B /* Chomp!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chomp!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD70EFE21B50E79E008F213B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD70EFE31B50E79E008F213B /* Chomp_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chomp_Tests.swift; sourceTree = "<group>"; };
+		DD85DBA71B642865007CE772 /* EditViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewViewController.swift; sourceTree = "<group>"; };
 		DD8F36DC1B5A05FA004A6FC5 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DD8F36DE1B5A4DC3004A6FC5 /* stockIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stockIcon.png; sourceTree = "<group>"; };
 		DD8F36E01B5A517D004A6FC5 /* CreateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateVC.swift; sourceTree = "<group>"; };
-		DDE7F5A61B57074800BEE3DC /* recipeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeInfo.swift; sourceTree = "<group>"; };
-		DDE7F5AA1B570F2700BEE3DC /* pork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pork.png; sourceTree = "<group>"; };
-		DDE7F5AB1B570F2700BEE3DC /* chouder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chouder.png; sourceTree = "<group>"; };
-		DDE7F5AC1B570F2700BEE3DC /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				DD8F36DE1B5A4DC3004A6FC5 /* stockIcon.png */,
-				DD4818121B5603A800734965 /* icon.png */,
-				DDE7F5AA1B570F2700BEE3DC /* pork.png */,
-				DDE7F5AB1B570F2700BEE3DC /* chouder.png */,
-				DDE7F5AC1B570F2700BEE3DC /* burger.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -120,10 +110,11 @@
 				DD70EFCA1B50E79E008F213B /* AppDelegate.swift */,
 				DD4818141B56143300734965 /* ViewController.swift */,
 				DD46F0721B57644200EEAA3C /* BackTableVC.swift */,
-				DD8F36E01B5A517D004A6FC5 /* CreateVC.swift */,
 				DD8F36DC1B5A05FA004A6FC5 /* Recipe.swift */,
-				DD6E1FE31B583B8200E3D095 /* recipeItem.swift */,
-				DDE7F5A61B57074800BEE3DC /* recipeInfo.swift */,
+				DD85DBA71B642865007CE772 /* EditViewViewController.swift */,
+				DD8F36E01B5A517D004A6FC5 /* CreateVC.swift */,
+				DD3647561B62F8BC006309F8 /* NewIngredient.swift */,
+				DD3647581B62FB57006309F8 /* ingredientTableCell.swift */,
 				DD4818161B56149B00734965 /* CustomViewCell.swift */,
 				DD46F0741B576C3F00EEAA3C /* Main.storyboard */,
 				DD70EFD41B50E79E008F213B /* Images.xcassets */,
@@ -243,13 +234,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE7F5AE1B570F2700BEE3DC /* chouder.png in Resources */,
 				DD70EFD81B50E79E008F213B /* LaunchScreen.xib in Resources */,
-				DDE7F5AD1B570F2700BEE3DC /* pork.png in Resources */,
 				DD46F0751B576C3F00EEAA3C /* Main.storyboard in Resources */,
-				DDE7F5AF1B570F2700BEE3DC /* burger.png in Resources */,
 				DD8F36DF1B5A4DC3004A6FC5 /* stockIcon.png in Resources */,
-				DD4818131B5603A800734965 /* icon.png in Resources */,
 				DD70EFD51B50E79E008F213B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,13 +255,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE7F5A71B57074800BEE3DC /* recipeInfo.swift in Sources */,
+				DD3647591B62FB57006309F8 /* ingredientTableCell.swift in Sources */,
 				DD4818151B56143300734965 /* ViewController.swift in Sources */,
+				DD3647571B62F8BC006309F8 /* NewIngredient.swift in Sources */,
 				DD8F36E11B5A517D004A6FC5 /* CreateVC.swift in Sources */,
-				DD6E1FE41B583B8200E3D095 /* recipeItem.swift in Sources */,
 				DD4818171B56149B00734965 /* CustomViewCell.swift in Sources */,
 				DD70EFCB1B50E79E008F213B /* AppDelegate.swift in Sources */,
 				DD70EFCE1B50E79E008F213B /* Chomp_.xcdatamodeld in Sources */,
+				DD85DBA81B642865007CE772 /* EditViewViewController.swift in Sources */,
 				DD8F36DD1B5A05FA004A6FC5 /* Recipe.swift in Sources */,
 				DD4818071B55877C00734965 /* SWRevealViewController.m in Sources */,
 				DD46F0731B57644200EEAA3C /* BackTableVC.swift in Sources */,

@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import CoreData
 
 class BackTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate{
     
     var TableArray = [String]()
     var filteredDataArray = [String]()
-    var testArray = [String()]
+   
      var searchActive : Bool = false
     
    
@@ -21,10 +22,13 @@ class BackTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     override func viewDidLoad() {
         
         
-        for var i = 0; i < dataArray.count; i++
+        for var i = 0; i < allRecipes.count; i++
         {
-            TableArray.append(dataArray[i].name)
-            testArray.append(dataArray[i].name)
+            var recipe = allRecipes[i]
+            
+            var recipeName = (recipe.valueForKey("name") as? String)!
+            TableArray.append(recipeName)
+            
         }
         
         searchBar.delegate = self
@@ -69,17 +73,17 @@ class BackTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         if(searchActive) {
             return filteredDataArray.count
         }
-        return dataArray.count;
+        return allRecipes.count;
     }
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var cell = tableView.dequeueReusableCellWithIdentifier("recipeCell") as! UITableViewCell
-        
+        let recipe = allRecipes[indexPath.row]
         if(searchActive){
             cell.textLabel?.text = filteredDataArray[indexPath.row]
         } else {
-            cell.textLabel?.text = dataArray[indexPath.row].name;
+            cell.textLabel?.text =  (recipe.valueForKey("name") as? String)!
         }
         
         //cell.textLabel?.text = dataArray[indexPath.row].name
@@ -91,27 +95,11 @@ class BackTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if (segue.identifier == "recipeSegue")
-        {
-        var recipelView : Recipe = segue.destinationViewController as! Recipe
         
-            if(searchActive)
-            {
-            let result = find(testArray, filteredDataArray[0])
-            var fixed = result!-1
-            recipelView.index = fixed
-            }
-            else
-            {
-            var indexPath : NSIndexPath! = myTablevView.indexPathForSelectedRow()
-            println(indexPath.row)
-            var index : Int = indexPath.row
-                recipelView.index = index
-                recipelView.hidden1 = false
-            }
-            
-        }
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.myTablevView.reloadData()
     }
     
 

@@ -16,10 +16,10 @@ class CustomViewCell: UICollectionViewCell
     @IBOutlet weak var picture: UIImageView!
   
     
-    func refreshCell(cellText: String, recipeImg: String)
+    func refreshCell(cellText: String, recipeImg: UIImage)
     {
         myLabel!.text = cellText
-        picture!.image = UIImage(named: recipeImg)
+        picture!.image =  recipeImg as UIImage
         
         
     }
