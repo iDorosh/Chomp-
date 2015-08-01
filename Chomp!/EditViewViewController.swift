@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class EditViewViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditViewViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
     
     var existingItem : NSManagedObject!
     var categories = ["Burgers","Cakes","Pies","Salads", "Sandwiches", "Soups" ]
@@ -26,6 +26,7 @@ class EditViewViewController: UIViewController, UIImagePickerControllerDelegate,
     var decodedimage: UIImage = UIImage()
     
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var editName: UITextField!
     @IBOutlet weak var editCategoryLabel: UILabel!
     
@@ -39,6 +40,7 @@ class EditViewViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBOutlet weak var cancel: UIButton!
    
+    //IBAction to display the camera
     @IBAction func camera(sender: UIButton)
     {
         var controller : UIImagePickerController = UIImagePickerController()
@@ -50,6 +52,7 @@ class EditViewViewController: UIViewController, UIImagePickerControllerDelegate,
         self.presentViewController(controller, animated:true, completion:nil)
     }
     
+    //IBAction to display the gallery
     @IBAction func gallery(sender: UIButton)
     {
         var controller : UIImagePickerController = UIImagePickerController()
@@ -61,6 +64,8 @@ class EditViewViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func done(sender: UIButton)
     {
+        //Hides all contents of the image picker
+        //Also sets the category label to the value of the image picker
         done.hidden = true
         cancel.hidden = true
         editCategoryLabel.text = categories[value]
@@ -70,6 +75,7 @@ class EditViewViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func cancel(sender: UIButton)
     {
+        //Hides all contents of the image picker
         picker.hidden = true
         cancel.hidden = true
         done.hidden = true
@@ -78,20 +84,21 @@ class EditViewViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func showPicker(sender: UIButton)
     {
+        //Shows the image picker
         picker.hidden = false
         cancel.hidden = false
         done.hidden = false
     }
     @IBAction func saveEdit(sender: UIBarButtonItem)
     {
+        //Calls the save edit function to set all the new information to the recipe
         saveEdit(editName.text, ingredients: editIngredients.text, directions: editDirections.text, category: editCategoryLabel.text!, photo: currentImage)
-        println(editName.text)
         self.navigationController?.popViewControllerAnimated(true)
     }
     
     override func viewWillAppear(animated: Bool)
     {
-        println(currentName)
+        //Sets all the labels, textfields, textviews and the image to the existing recipes information
         self.editName.text = currentName
         self.editCategoryLabel.text = currentCat
         decodedimage = UIImage(data: currentImage)!
@@ -100,22 +107,24 @@ class EditViewViewController: UIViewController, UIImagePickerControllerDelegate,
         self.editDirections.text = currentDirections
     }
 
-    override func viewDidLoad() {
-        
+    override func viewDidLoad()
+    {
+        self.editDirections.delegate = self
+        self.editName.delegate = self
+        self.editIngredients.delegate = self
         self.navigationController?.navigationBarHidden = false
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
     func saveEdit(name: String, ingredients: String, directions: String, category: String, photo: NSData)
     {
+        //fetches current recipe information and sets the values of the edit screen as the new values for the recipe.
         let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context:NSManagedObjectContext = appDel.managedObjectContext!
         let entity = NSEntityDescription.entityForName("Recipes", inManagedObjectContext: context)
@@ -126,41 +135,71 @@ class EditViewViewController: UIViewController, UIImagePickerControllerDelegate,
         existingItem.setValue(photo, forKey: "photo")
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
+    {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
         return categories.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!
+    {
+        //sets titles for the picker values
         return categories[row]
     }
     
-    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int){
+    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int)
+    {
         value = row
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject])
     {
+        //sets the image to the new image taken in the edit screen.
         var mediaDictionary : NSDictionary = info as NSDictionary
         myImage = mediaDictionary.objectForKey("UIImagePickerControllerEditedImage") as! UIImage
         current = 1
         currentImage = UIImageJPEGRepresentation(myImage, 0)
-        println(myImage)
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //Moves the UI Up for the keyboar
+    func textViewDidBeginEditing(textView: UITextView)
+    {
+        if (textView == editIngredients)
+        {
+            scrollView.setContentOffset(CGPoint(x: 0,y: 100),animated: true)
+        }
+        else
+        {
+        scrollView.setContentOffset(CGPoint(x: 0,y: 250),animated: true)
+        }
     }
-    */
-
+    
+    func textViewDidEndEditing(textView: UITextView)
+    {
+        scrollView.setContentOffset(CGPoint(x: 0,y: 0),animated: true)
+    }
+    
+    //Sets the textfields and views as firstresponders
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool
+    {
+        if(text == "\n")
+        {
+            editDirections.resignFirstResponder()
+            editIngredients.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        editName.resignFirstResponder()
+        
+        return true
+    }
 }

@@ -11,7 +11,7 @@ import UIKit
 class CustomViewCell: UICollectionViewCell
 {
     
-    
+    //Custom cells for the collection view on the main screen
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var picture: UIImageView!
   

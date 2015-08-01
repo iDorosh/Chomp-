@@ -8,12 +8,15 @@
 
 import UIKit
 
-class NewIngredient: UIViewController {
-    
-    var units: [String] = ["none","lb","oz","pt","fl oz","cup","tsp","tbsp"]
+class NewIngredient: UIViewController, UITextFieldDelegate
+{
+    var units: [String] = ["none","lb","cup","tsp","tbsp"]
+    var convertUnits : [String] = [String]()
     var singleIngredient : [String] = [String]()
     var value : Int = 0
     var selected : Int = 0
+    var currentPicker : Int = 0
+    var finalConversion : String = String()
     
     @IBOutlet weak var ingredientName: UITextField!
     @IBOutlet weak var amount: UITextField!
@@ -21,29 +24,39 @@ class NewIngredient: UIViewController {
     @IBOutlet weak var conversion: UITextField!
     @IBOutlet weak var picker: UIPickerView!
     
+    
     @IBOutlet weak var done: UIButton!
     @IBOutlet weak var cancel: UIButton!
     
-    
+    //Opens pickers wit the initial units
     @IBAction func openPicker(sender: UIButton)
     {
+        units = ["none","lb","cup","tsp","tbsp"]
+        picker.reloadAllComponents()
+        currentPicker = 0
         picker.hidden = false
         cancel.hidden = false
         done.hidden = false
         selected = 1
     }
     
+    //Opens pickers with the convertion units
     @IBAction func openPickerConvert(sender: UIButton)
     {
+        units = ["none","kg","ml","g"]
+        picker.reloadAllComponents()
+        currentPicker = 1
         picker.hidden = false
         cancel.hidden = false
         done.hidden = false
         selected = 0
     }
+    //Saves measurements based on if the user wants to convert the initial unit.
     @IBAction func saveMeasurment(sender: UIButton)
     {
         done.hidden = true
         cancel.hidden = true
+        
         if (selected == 1)
         {
             measurement.text = units[value]
@@ -66,8 +79,11 @@ class NewIngredient: UIViewController {
         cancel.hidden = true
         done.hidden = true
     }
+    
     @IBAction func saveIngredient(sender: UIBarButtonItem)
     {
+        //Displays alert if the text fields are empty
+        //Combines all the ingredient information into a single string and sends that string to the tableview
         if (ingredientName.text == "" || amount.text == "" || measurement.text == "" )
         {
             var alert = UIAlertController(title: "Empty Fields", message: "Please complete all fields before saving", preferredStyle: UIAlertControllerStyle.Alert)
@@ -77,6 +93,9 @@ class NewIngredient: UIViewController {
         }
         else
         {
+            convertUnits(measurement.text, convertUnit: conversion.text)
+            
+            
         if (conversion.text == "none")
         {
             if (measurement.text == "none")
@@ -93,6 +112,7 @@ class NewIngredient: UIViewController {
         }
         else
         {
+            amount.text = finalConversion
             singleIngredient.append(amount.text)
             singleIngredient.append(conversion.text)
             singleIngredient.append(ingredientName.text)
@@ -103,44 +123,169 @@ class NewIngredient: UIViewController {
         self.navigationController?.popViewControllerAnimated(true)
         }
         
+        
+        
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    override func viewDidLoad()
+    {
+        ingredientName.delegate = self
+        amount.delegate = self
+        super.viewDidLoad()
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    //Functions for the picker
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
+    {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
         return units.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!
+    {
         return units[row]
     }
     
-    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int){
+    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int)
+    {
         value = row
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        println(value)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        ingredientName.resignFirstResponder()
+        amount.resignFirstResponder()
+        
+        return true
     }
-    */
 
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
+    func convertUnits(currentUnit: String, convertUnit: String)
+    {
+        var stringToInt = Int()
+        var currentString = amount.text
+        var convertedInt = Double()
+        var convertedDouble = Double()
+        var adjustedUnits = ""
+        
+        //If statements for the converstions
+        if (currentUnit == "lb" && convertUnit == "kg")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble*2.2
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+            
+        }
+        if (currentUnit == "lb" && convertUnit == "g")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble/0.0022046
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+            
+        }
+        if (currentUnit == "lb" && convertUnit == "ml")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble*453.59
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+            
+        }
+        if (currentUnit == "cup" && convertUnit == "kg")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble*0.2365882375
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+            
+        }
+        if (currentUnit == "cup" && convertUnit == "g")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble*229.92
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+            
+        }
+        if (currentUnit == "cup" && convertUnit == "ml")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble*236.588
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+        }
+        if (currentUnit == "tsp" && convertUnit == "kg")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble*0.0057
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+            
+        }
+        if (currentUnit == "tsp" && convertUnit == "g")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble*4.92892161458
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+            
+        }
+        if (currentUnit == "tsp" && convertUnit == "ml")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble*4.92892
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+            
+        }
+        if (currentUnit == "tbsp" && convertUnit == "kg")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble*0.017
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+            
+        }
+        if (currentUnit == "tbsp" && convertUnit == "ml")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble*14.7868
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+            
+        }
+        if (currentUnit == "tbsp" && convertUnit == "g")
+        {
+            stringToInt = amount.text.toInt()!
+            convertedDouble = Double(stringToInt)
+            convertedInt = convertedDouble*15
+            adjustedUnits = String(stringInterpolationSegment: convertedInt)
+            println(adjustedUnits)
+            
+        }
+        finalConversion = adjustedUnits
+        
+    }
 }

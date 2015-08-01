@@ -23,6 +23,8 @@
 		DD8F36DD1B5A05FA004A6FC5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8F36DC1B5A05FA004A6FC5 /* Recipe.swift */; };
 		DD8F36DF1B5A4DC3004A6FC5 /* stockIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD8F36DE1B5A4DC3004A6FC5 /* stockIcon.png */; };
 		DD8F36E11B5A517D004A6FC5 /* CreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8F36E01B5A517D004A6FC5 /* CreateVC.swift */; };
+		DDBB04B71B697D6000CAFCCE /* loadingscreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDBB04B61B697D6000CAFCCE /* loadingscreen.jpg */; };
+		DDE4F6081B6B1C980051BCE9 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4F6071B6B1C980051BCE9 /* Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		DD8F36DC1B5A05FA004A6FC5 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		DD8F36DE1B5A4DC3004A6FC5 /* stockIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stockIcon.png; sourceTree = "<group>"; };
 		DD8F36E01B5A517D004A6FC5 /* CreateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateVC.swift; sourceTree = "<group>"; };
+		DDBB04B61B697D6000CAFCCE /* loadingscreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loadingscreen.jpg; sourceTree = "<group>"; };
+		DDE4F6071B6B1C980051BCE9 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		DD48180F1B5599A200734965 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DDBB04B61B697D6000CAFCCE /* loadingscreen.jpg */,
 				DD8F36DE1B5A4DC3004A6FC5 /* stockIcon.png */,
 			);
 			name = Images;
@@ -109,6 +114,7 @@
 			children = (
 				DD70EFCA1B50E79E008F213B /* AppDelegate.swift */,
 				DD4818141B56143300734965 /* ViewController.swift */,
+				DDE4F6071B6B1C980051BCE9 /* Search.swift */,
 				DD46F0721B57644200EEAA3C /* BackTableVC.swift */,
 				DD8F36DC1B5A05FA004A6FC5 /* Recipe.swift */,
 				DD85DBA71B642865007CE772 /* EditViewViewController.swift */,
@@ -234,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDBB04B71B697D6000CAFCCE /* loadingscreen.jpg in Resources */,
 				DD70EFD81B50E79E008F213B /* LaunchScreen.xib in Resources */,
 				DD46F0751B576C3F00EEAA3C /* Main.storyboard in Resources */,
 				DD8F36DF1B5A4DC3004A6FC5 /* stockIcon.png in Resources */,
@@ -264,6 +271,7 @@
 				DD70EFCE1B50E79E008F213B /* Chomp_.xcdatamodeld in Sources */,
 				DD85DBA81B642865007CE772 /* EditViewViewController.swift in Sources */,
 				DD8F36DD1B5A05FA004A6FC5 /* Recipe.swift in Sources */,
+				DDE4F6081B6B1C980051BCE9 /* Search.swift in Sources */,
 				DD4818071B55877C00734965 /* SWRevealViewController.m in Sources */,
 				DD46F0731B57644200EEAA3C /* BackTableVC.swift in Sources */,
 			);

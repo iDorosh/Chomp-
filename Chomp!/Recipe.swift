@@ -12,10 +12,10 @@ import MessageUI
 import CoreData
 
 
-class Recipe: UIViewController, MFMailComposeViewControllerDelegate{
+class Recipe: UIViewController, MFMailComposeViewControllerDelegate
+{
     
     var index: Int? = 0
-    var hidden1 : Bool = false
     var existingItem : NSManagedObject!
     var imageData: NSData = NSData()
     
@@ -23,38 +23,54 @@ class Recipe: UIViewController, MFMailComposeViewControllerDelegate{
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var recipeCat: UILabel!
     @IBOutlet weak var recipePic: UIImageView!
-    
-    
-    
     @IBOutlet weak var directions: UITextView!
-    
     @IBOutlet weak var ingredients: UITextView!
     
     @IBAction func homeButton(sender: AnyObject)
     {
         self.dismissViewControllerAnimated(true, completion: nil)
-        
     }
-   var itemName = "test"
-    
+  
     @IBAction func removeRecipe(sender: AnyObject)
     {
         
-        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context:NSManagedObjectContext = appDel.managedObjectContext!
-        context.deleteObject(allRecipes[index!] as NSManagedObject)
-        allRecipes.removeAtIndex(index!)
-        context.save(nil)
-        navigationController?.popToRootViewControllerAnimated(true)
+        // Alert to verify the deletion of a recipe
+        var alertController = UIAlertController(title: "Remove Recipe", message: "Are you sure that you want to remove this recipe?", preferredStyle: .Alert)
+        
+        // Create the actions ok will delete the recipe and return to the main screen the cancel button will just close the alert view.
+        var okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let context:NSManagedObjectContext = appDel.managedObjectContext!
+            context.deleteObject(allRecipes[self.index!] as NSManagedObject)
+            allRecipes.removeAtIndex(self.index!)
+            self.navigationController?.popToRootViewControllerAnimated(true)
+            context.save(nil)
+            
+        }
+        var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+            UIAlertAction in
+        }
+        
+        // Add the actions
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        // Present the controller
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+        //navigationController?.popToRootViewControllerAnimated(true)
     }
     
-
+    //IBAction to display the email view when the compose button is selected.
     @IBAction func sendEmail(sender: UIBarButtonItem)
     {
         let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
+        if MFMailComposeViewController.canSendMail()
+        {
             self.presentViewController(mailComposeViewController, animated: true, completion: nil)
-        } else {
+        } else
+        {
             self.showSendMailErrorAlert()
         }
     }
@@ -66,23 +82,20 @@ class Recipe: UIViewController, MFMailComposeViewControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        //self.navigationController?.navigationBarHidden = true
-        self.navigationController?.navigationBarHidden = true
+    override func viewWillAppear(animated: Bool)
+    {
+        
+        //Sets all the information for the labels textviews and the image under the recipe screen.
         let recipe = allRecipes[index!]
         recipeTitle.text = (recipe.valueForKey("name") as? String)!
         recipeCat.text = (recipe.valueForKey("category") as? String)!
-        
         
         imageData = (recipe.valueForKey("photo") as? NSData)!
         var decodedimage = UIImage(data: imageData)!
@@ -94,7 +107,9 @@ class Recipe: UIViewController, MFMailComposeViewControllerDelegate{
         
     }
     
-    func configuredMailComposeViewController() -> MFMailComposeViewController {
+    //Shows the email viewcontroller and sets the proper subject line and content under the email
+    func configuredMailComposeViewController() -> MFMailComposeViewController
+    {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
         mailComposerVC.setToRecipients([])
@@ -104,21 +119,23 @@ class Recipe: UIViewController, MFMailComposeViewControllerDelegate{
         return mailComposerVC
     }
     
-    func showSendMailErrorAlert() {
+    func showSendMailErrorAlert()
+    {
+        //Alert that will display if the email cannot be sent.
         let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
         sendMailErrorAlert.show()
     }
     
         
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!)
+    {
         controller.dismissViewControllerAnimated(true, completion: nil)
-        
     }
 
     
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
+        //Sends all information to the edit screen.
         if (segue.identifier == "editSegue")
         {
             var editView : EditViewViewController  = segue.destinationViewController as! EditViewViewController
