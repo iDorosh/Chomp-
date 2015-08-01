@@ -246,7 +246,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="x5S-OM-op6">
                             <color key="tintColor" red="0.25882352939999997" green="0.58823529409999997" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="n0f-ZO-eFA" kind="unwind" unwindAction="backTo:" id="2qi-vN-o4E"/>
+                                <segue destination="n0f-ZO-eFA" kind="unwind" unwindAction="backTo:" id="ITl-vN-rof"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -648,6 +648,9 @@
                     <navigationItem key="navigationItem" title="Add Ingredient" id="yFw-Bc-udK">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="OtS-yr-yWj">
                             <color key="tintColor" red="0.25882352939999997" green="0.58823529409999997" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="c8Y-hI-UMr" kind="unwind" unwindAction="backToCreate:" id="kJd-zY-VF1"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="bL2-Ab-T9c">
                             <color key="tintColor" red="0.25882352939999997" green="0.58823529409999997" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -667,6 +670,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UGz-vm-gkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="c8Y-hI-UMr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1402" y="1252"/>
         </scene>

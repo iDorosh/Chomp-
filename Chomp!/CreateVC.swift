@@ -33,6 +33,10 @@ class CreateVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
+    @IBAction func backToCreate(segue: UIStoryboardSegue)
+    {
+    }
+    
     @IBAction func cancelSave(sender: UIBarButtonItem)
     {
         //Cancels saving the recipe
