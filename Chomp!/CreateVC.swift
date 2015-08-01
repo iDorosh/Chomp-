@@ -124,6 +124,7 @@ class CreateVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             
         
         self.saveName(newName.text, img: imageData, category: newCategory.text!, directions: newDirections.text)
+            ingredientsArray = []
         navigationController?.popToRootViewControllerAnimated(true)
             
         }
